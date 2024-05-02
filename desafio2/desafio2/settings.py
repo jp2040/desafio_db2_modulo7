@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'desafioadl'
 ]
 
 MIDDLEWARE = [
@@ -73,12 +74,17 @@ WSGI_APPLICATION = 'desafio2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
+DATABASES = DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nombre_base_de_datos',
+        'USER': 'jpgarrido',
+        'PASSWORD': 'Antares2040',
+        'HOST': 'localhost',  # O la dirección IP del servidor PostgreSQL
+        'PORT': '5432',       # El puerto por defecto de PostgreSQL es 5432
     }
 }
+
 
 
 # Password validation
